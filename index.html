@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación - miniSQL</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <nav>
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Logo miniSQL">
+                </div>
+                <h2>Índice</h2>
+                <ul>
+                    <li><a href="#descripcion">Descripción</a></li>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#guia">Guía rápida</a></li>
+                    <li><a href="#interfaz">Interfaz</a></li>
+                    <li><a href="#modulos">Módulos</a></li>
+                    <li><a href="#resaltado">Resaltado</a></li>
+                    <li><a href="#analisis">Compilador</a></li>
+                    <li><a href="aboutUs.html">About us</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="container">
+
+            <div class="header">
+                <h1>Documentación de miniSQL</h1>
+                <p class="subtitle">
+                    Compilador SQL educativo con sintaxis en español desarrollado en Python.
+                </p>
+            </div>
+
+            <!-- INTRODUCCIÓN -->
+            <section id="descripcion">
+                <h2>Introducción</h2>
+
+                <p>
+                    miniSQL es un compilador educativo inspirado en MySQL que permite
+                    ejecutar instrucciones SQL utilizando comandos escritos en español.
+                    Su objetivo principal es facilitar el aprendizaje y uso de bases de datos
+                    para usuarios principiantes.
+                </p>
+
+                <p>
+                    El sistema analiza, valida y traduce instrucciones escritas en miniSQL
+                    hacia consultas SQL compatibles con MySQL. Además, cuenta con una interfaz
+                    gráfica desarrollada en Python mediante la librería CustomTkinter.
+                </p>
+
+                <p>
+                    El compilador incluye distintas etapas del proceso de compilación:
+                    análisis léxico, sintáctico y semántico, generación del árbol sintáctico,
+                    traducción a SQL estándar y ejecución de consultas sobre MySQL.
+                </p>
+            </section>
+
+            <!-- INTERFAZ -->
+            <section id="interfaz">
+                <h2>Interfaz del sistema</h2>
+
+                <p>
+                    La aplicación cuenta con una interfaz gráfica organizada en distintos paneles
+                    que permiten visualizar cada etapa del compilador de manera clara y ordenada.
+                </p>
+
+                <ul>
+                    <li>Editor de código miniSQL.</li>
+                    <li>Panel de análisis léxico.</li>
+                    <li>Panel de análisis sintáctico.</li>
+                    <li>Panel de análisis semántico.</li>
+                    <li>Visualización del árbol sintáctico.</li>
+                    <li>Panel de traducción SQL.</li>
+                    <li>Consola de ejecución y errores.</li>
+                </ul>
+
+                <p>
+                    También permite cargar archivos, escribir consultas manualmente
+                    y ejecutar el análisis completo desde la interfaz.
+                </p>
+            </section>
+
+            <!-- MÓDULOS -->
+            <section id="modulos">
+                <h2>Módulos principales</h2>
+
+                <div class="card">
+                    <h3>lexer.py</h3>
+                    <p>Realiza el análisis léxico y genera los tokens del lenguaje.</p>
+                </div>
+
+                <div class="card">
+                    <h3>parser.py</h3>
+                    <p>Valida la gramática de miniSQL y construye el árbol sintáctico.</p>
+                </div>
+
+                <div class="card">
+                    <h3>semantico.py</h3>
+                    <p>Comprueba la coherencia lógica y semántica de las consultas.</p>
+                </div>
+
+                <div class="card">
+                    <h3>traductor.py</h3>
+                    <p>Convierte instrucciones miniSQL a SQL estándar compatible con MySQL.</p>
+                </div>
+
+                <div class="card">
+                    <h3>conexion.py</h3>
+                    <p>Gestiona la conexión y ejecución de consultas en MySQL.</p>
+                </div>
+
+                <div class="card">
+                    <h3>utils_arbol.py</h3>
+                    <p>Genera la representación visual del árbol sintáctico.</p>
+                </div>
+            </section>
+
+            <!-- RESALTADO -->
+            <section id="resaltado">
+                <h2>Resaltado de sintaxis</h2>
+
+                <p>
+                    El sistema incluye resaltado de sintaxis para facilitar la lectura
+                    y detección de errores dentro del editor de código.
+                </p>
+
+                <ul>
+                    <li>Palabras reservadas → Cian</li>
+                    <li>Operadores → Naranja</li>
+                    <li>Símbolos → Amarillo</li>
+                    <li>Identificadores → Blanco</li>
+                    <li>Números enteros → Verde claro</li>
+                    <li>Números flotantes → Verde</li>
+                    <li>Cadenas de texto → Coral</li>
+                    <li>Errores léxicos → Rojo</li>
+                </ul>
+            </section>
+
+            <section id="analisis">
+                <h2>Etapas del compilador</h2>
+
+                <h3>Análisis Léxico</h3>
+                <p class="card">
+                    Convierte el código fuente en tokens reconocibles por el compilador,
+                    identificando palabras reservadas, operadores, símbolos, números
+                    y cadenas de texto.
+                </p>
+
+                <h3>Análisis Sintáctico</h3>
+                <p class="card">
+                    Verifica que las instrucciones sigan correctamente la gramática
+                    definida para miniSQL y genera el árbol sintáctico correspondiente.
+                </p>
+
+                <h3>Análisis Semántico</h3>
+                <p class="card">
+                    Comprueba la coherencia lógica de las consultas, validando tablas,
+                    columnas, tipos de datos y condiciones utilizadas.
+                </p>
+
+                <h3>Traducción SQL</h3>
+                <p class="card">
+                    Transforma las instrucciones escritas en español a consultas SQL
+                    estándar compatibles con MySQL.
+                </p>
+
+                <h3>Ejecución</h3>
+                <p class="card">
+                    Ejecuta las consultas generadas sobre MySQL y muestra los resultados
+                    obtenidos dentro de la interfaz.
+                </p>
+            </section>
+
+            <section id="guia">
+                <h2>Ejemplos de miniSQL</h2>
+
+                <h3>Consulta SELECT</h3>
+                <pre><code>seleccionar nombre, edad
+de usuarios
+donde edad > 18;</code></pre>
+
+                <h3>INSERT</h3>
+                <pre><code>insertar en empleados
+(nombre, puesto)
+valores ('Ana', 'Analista');</code></pre>
+
+                <h3>UPDATE</h3>
+                <pre><code>actualizar productos
+establecer precio = 150
+donde id = 1;</code></pre>
+
+                <h3>DELETE</h3>
+                <pre><code>borrar de usuarios
+donde id = 10;</code></pre>
+            </section>
+
+            <!-- CARACTERISTICAS -->
+            <section id="caracteristicas">
+                <h2>Características principales</h2>
+
+                <ul>
+                    <li>Compilador SQL con sintaxis en español.</li>
+                    <li>Interfaz gráfica moderna desarrollada en Python.</li>
+                    <li>Análisis léxico, sintáctico y semántico.</li>
+                    <li>Generación de árbol sintáctico.</li>
+                    <li>Traducción automática a MySQL.</li>
+                    <li>Resaltado de sintaxis.</li>
+                    <li>Panel de errores y validaciones.</li>
+                    <li>Ejecución directa sobre MySQL.</li>
+                </ul>
+            </section>
+        </main>
