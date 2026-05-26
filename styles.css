@@ -201,3 +201,21 @@
             object-fit: cover;
             margin-bottom: 15px;
         }
+
+        .tecnm-logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .itc-logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            position: absolute;
+            right: 300px;
+        }
+        .linces-logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
